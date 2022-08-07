@@ -40,3 +40,4 @@ def shorten_url(url, value=None, is_permanent=False):
     urlObj.save()
     return urlObj.short_url
 
+__all__ = ["shorten_url"]
