@@ -61,6 +61,18 @@ print(url_route)
 ```
 You can now navigate to you the route that you assigned to `urlshortner.urls` in your URLConf add the returned value att the end of the url. In this case it would be `http://localhost:8000/r/0ee3f0/` and this would redirect you to the right URL
 
+Sometimes you want to create a custom URL. For example you want to create a short link for a blog about your new product and you want a url that is easy to remember. You can add this easily by adding the `value` argument to the `shorten_url` function
+
+```py
+from urlshortner.utils import shorten_url
+
+url_route = shorten_url(
+    "https://myblog.com/blog/2022/10/10/..../my-new-product",
+    value="NewProduct"
+    is_permanent=False
+)
+```
+You can now navigate to `https://localhost/r/NewProduct` and It will redirect you
 ___
 
 Licence MIT

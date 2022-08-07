@@ -26,11 +26,18 @@ def create_url_hash(url):
     return hash_string[:7]
 
 
-def shorten_url(url, is_permanent=False):
+
+def shorten_url(url, value=None, is_permanent=False):
     """
     Shorten a given url.
     """
-    short_url = create_short_url_id(url)
+    short_url = ""
+    if value != None:
+        short_url = value
+    else:
+        short_url = create_short_url_id(url)
     urlObj = Url(url=url, short_url=short_url, is_permanent=is_permanent)
     urlObj.save()
     return urlObj.short_url
+
+__all__ = ["shorten_url"]
