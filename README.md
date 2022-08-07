@@ -60,3 +60,9 @@ print(url_route)
 # >>> 0ee3f0
 ```
 You can now navigate to you the route that you assigned to `urlshortner.urls` in your URLConf add the returned value att the end of the url. In this case it would be `http://localhost:8000/r/0ee3f0/` and this would redirect you to the right URL
+
+___
+
+Licence MIT
+
+Copyright ©  [Beingana JIm Junior](https://github.com/jim-junior), 2022

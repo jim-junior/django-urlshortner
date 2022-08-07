@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
-from .utils.http import HTTPTemporaryRedirect, HTTPPermanentRedirect, HTTPNotFound
+from .utils.http_ import HTTPTemporaryRedirect, HTTPPermanentRedirect, HTTPNotFound
 from .utils.urls import shorten_url
 from .models import Url
 
